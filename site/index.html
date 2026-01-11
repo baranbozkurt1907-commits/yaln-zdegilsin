@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Yalnız Değilsin — Her kadın güvende olma hakkına sahiptir!</title>
+<style>
+:root{
+  --bg:#f6f6fb;
+  --card:#ffffff;
+  --text:#4a148c;
+  --muted:#6b4a8a;
+  --accent:#8e24aa;
+  --accent-strong:#6a1b9a;
+  --shadow:0 8px 24px rgba(0,0,0,0.12);
+}
+body.dark{
+  --bg:#0f1114;
+  --card:#15161a;
+  --text:#e6d6f5;
+  --muted:#caaee3;
+  --accent:#c29ce6;
+  --accent-strong:#a46bd6;
+  --shadow:0 10px 30px rgba(0,0,0,0.45);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%; margin:0; font-family:Inter, "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+body{
+  background:var(--bg); color:var(--text); -webkit-font-smoothing:antialiased;
+  transition:background .35s,color .35s;
+}
+
+/* --- Header --- */
+header{
+  position:sticky; top:0; z-index:40;
+  display:flex; align-items:center; justify-content:space-between;
+  gap:12px; padding:14px 22px; background:var(--bg);
+  border-bottom:1px solid rgba(0,0,0,0.04);
+}
+.header-left{
+  display:flex; 
+  flex-direction:column; 
+  align-items:flex-start;
+  gap:6px;
+}
+.logo{
+  width:100%;
+  max-width:800px; /* küçültüldü */
+  aspect-ratio:1563/315;
+  display:flex; align-items:center; justify-content:center; border-radius:12px; overflow:hidden;
+}
+.logo img{width:100%;height:100%;object-fit:contain;display:block}
+
+.brand-subtitle{
+  font-size:clamp(12px,1vw,16px); /* küçültüldü */
+  color:var(--muted);
+  text-align:left;
+}
+body.dark .brand-subtitle{ color:#caaee3 }
+
+.mode-toggle{
+  background:var(--card); border:1px solid rgba(0,0,0,0.06);
+  padding:8px 12px;border-radius:999px; cursor:pointer; font-weight:600;
+  display:inline-flex; align-items:center; gap:8px;
+}
+body.dark .mode-toggle{background:transparent;border:1px solid rgba(255,255,255,0.06)}
+
+/* --- Hero --- */
+.hero{
+  position:relative; padding:78px 20px 120px; display:flex; justify-content:center;
+}
+.hero-inner{max-width:1200px; width:100%; display:flex; gap:36px; align-items:center; justify-content:space-between; flex-wrap:wrap}
+.slogan-wrap{
+  flex:1 1 520px; min-width:280px; position:relative; padding:36px;
+}
+.slogan{
+  display:inline-block;
+  font-size:clamp(22px,4.2vw,40px);
+  font-weight:800; color:var(--accent);
+  line-height:1.03; letter-spacing:-0.6px; text-align:left;
+  background:linear-gradient(90deg, var(--accent), var(--accent-strong));
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+  filter:drop-shadow(0 6px 18px rgba(142,36,170,0.18));
+}
+.subtext{
+  margin-top:18px; color:var(--muted); font-size:1rem; max-width:54ch;
+}
+body.dark .subtext{ color:#caaee3; }
+.hero-cta{
+  margin-top:20px; display:flex; gap:12px; align-items:center;
+}
+.btn-primary{
+  background:var(--accent); color:white; border:none; padding:12px 18px; border-radius:12px; cursor:pointer; font-weight:700;
+  box-shadow:0 8px 20px rgba(142,36,170,0.12);
+}
+.btn-ghost{background:transparent;border:1px solid rgba(0,0,0,0.06); padding:10px 14px; border-radius:10px}
+
+/* --- Video --- */
+.video-wrap{
+  flex:0 0 360px; display:flex; justify-content:center; align-items:center;
+  transition: all 0.5s ease;
+}
+.video-wrap video{
+  width:auto; max-width:350px; height:600px; border-radius:20px; border:6px solid var(--accent); box-shadow:var(--shadow);
+  transition: all 0.5s ease;
+}
+.video-wrap.active video{
+  max-width:500px; height:800px;
+}
+
+/* --- Sections --- */
+section.content{max-width:1000px; margin:30px auto; padding:28px; background:transparent}
+.card{background:var(--card); border-radius:14px; padding:22px; box-shadow:var(--shadow)}
+h2.section-title{color:var(--accent); margin:6px 0 12px; font-size:1.35rem}
+p.lead{color:var(--muted); line-height:1.6}
+body.dark p.lead{ color:#caaee3; }
+
+footer{padding:28px; text-align:center; color:var(--muted); background:transparent; margin-top:28px}
+
+@media (max-width:900px){
+  .hero-inner{flex-direction:column-reverse; align-items:center}
+  .video-wrap{order:-1; margin-bottom:12px}
+  header{padding:12px 16px}
+  .logo{max-width:300px;} /* mobilde daha küçük */
+  .brand-subtitle{font-size:clamp(10px,2vw,14px);} 
+}
+</style>
+</head>
+<body>
+
+<header role="banner">
+  <div class="header-left">
+    <div class="logo" aria-hidden="true">
+      <img src="1.png" alt="Yalnız Değilsin logosu" onerror="this.style.display='none'">
+    </div>
+    <div class="brand-subtitle">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong> &nbsp; Güvenlik · Gizlilik · Destek</strong></div>
+  </div>
+  <div>
+    <button id="modeToggle" class="mode-toggle" aria-pressed="false" title="Koyu / Açık mod">
+      🌙 Koyu Mod
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="hero" aria-labelledby="hero-slogan">
+    <div class="hero-inner">
+      <div class="slogan-wrap">
+        <div id="hero-slogan" class="slogan" aria-live="polite">
+          Her kadın güvende olma hakkına sahiptir!
+        </div>
+        <div class="subtext">
+          “Yalnız Değilsin” uygulaması, tehlike anında sessiz ve hızlı yardım çağrısı göndermenizi sağlar.
+          Konum ve kısa kayıtlar yalnızca acil durumda paylaşılır. Güvenlik herkesin hakkıdır.
+        </div>
+        <div class="hero-cta" role="navigation" aria-label="Hero eylemleri">
+          <button class="btn-primary" id="startVideoBtn">Uygulamayı Keşfet</button>
+          <button class="btn-ghost" onclick="scrollToInfo()">Nasıl Çalışır?</button>
+        </div>
+      </div>
+
+      <div class="video-wrap" id="videoWrap">
+        <video id="heroVideo" controls>
+          <source src="video.mp4.MOV" type="video/mp4">
+          Tarayıcınız video etiketini desteklemiyor.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <section class="content" id="info">
+    <div class="card">
+      <h2 class="section-title">Nasıl çalışır?</h2>
+      <p class="lead">Uygulama, belirlediğiniz güvenlik ayarlarına göre güç tuşuna basıldığında arka planda konumunuzu ve kısa bir ses kaydını yalnızca yetkili kişilere veya yetkili makamlara iletir. Amaç hız ve gizliliktir.</p>
+    </div>
+  </section>
+
+  <section class="content" id="security">
+    <div class="card">
+      <h2 class="section-title">Gizlilik & Güvenlik</h2>
+      <p class="lead">Kişisel verileriniz uçtan uca şifrelenir. Veri paylaşımı yalnızca sizin onayınız veya acil durum koşullarıyla sınırlıdır. Gizlilik bizim önceliğimizdir.</p>
+    </div>
+  </section>
+
+  <section class="content" id="download">
+    <div class="card">
+      <h2 class="section-title">Hemen indir, güvenli ol!</h2>
+      <p class="lead">Android &amp; iOS’ta, tamamen ücretsiz. Birlikte daha güvenliyiz.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div style="max-width:1000px;margin:0 auto;padding:10px 22px;color:var(--muted)">
+    Yalnız Değilsin © 2025 | Tüm Hakları Saklıdır | 💜 Yaşam Güvenliği
+  </div>
+</footer>
+
+<script>
+const modeBtn = document.getElementById('modeToggle');
+modeBtn.addEventListener('click', () => {
+  const isDark = document.body.classList.toggle('dark');
+  modeBtn.setAttribute('aria-pressed', String(isDark));
+  modeBtn.textContent = isDark ? '☀️ Açık Mod' : '🌙 Koyu Mod';
+});
+
+// Scroll helper
+function scrollToInfo(){
+  document.getElementById('info').scrollIntoView({behavior:'smooth'});
+}
+
+// Video başlat + büyüt ve tam ortaya kaydır
+const startBtn = document.getElementById('startVideoBtn');
+const videoWrap = document.getElementById('videoWrap');
+const heroVideo = document.getElementById('heroVideo');
+
+startBtn.addEventListener('click', () => {
+  if(heroVideo.paused) heroVideo.play();
+  videoWrap.classList.add('active');
+  
+  // Video tam ortada olacak şekilde scroll
+  const rect = videoWrap.getBoundingClientRect();
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const offset = rect.top + scrollTop - (window.innerHeight/2) + (rect.height/2);
+  window.scrollTo({top: offset, behavior: 'smooth'});
+});
+</script>
+
+</body>
+</html>
